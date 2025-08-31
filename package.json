@@ -1,0 +1,29 @@
+{
+  "name": "react-backcustomcity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guadaluperobles/BackCustomCity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guadaluperobles/BackCustomCity/issues"
+  },
+  "homepage": "https://github.com/guadaluperobles/BackCustomCity#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
