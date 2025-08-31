@@ -1,0 +1,12 @@
+import {Router} from "express";
+import {index, save, clear, login, logout} from "../controllers/User.controller.js";
+
+const router = Router();
+
+router.post('/', index);
+router.post('/save', save);
+router.post('/delete', clear);
+router.post('/login', login);
+router.post('/logout', logout);
+
+export default router
