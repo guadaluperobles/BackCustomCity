@@ -1,9 +1,11 @@
-import app from './app.js'
-import {coneccionBD} from "./db.js";
+import { app } from './app.js'
+import { logger } from './logger.js'
 
-const PORT = process.env.PORT || 3000;
+const port = app.get('port')
+const host = app.get('host')
 
-coneccionBD();
-app.listen(PORT);
+process.on('unhandledRejection', reason => logger.error('Unhandled Rejection %O', reason))
 
-console.log("Servidor corriendo en el puerto:" , PORT )
+app.listen(port).then(() => {
+  logger.info(`Feathers app listening on http://${host}:${port}`)
+})

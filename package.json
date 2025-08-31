@@ -1,32 +1,71 @@
 {
-  "name": "react-backcustomcity",
-  "version": "1.0.0",
+  "name": "React-BackCustomCity",
   "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "keywords": [
+    "feathers"
+  ],
+  "author": {},
+  "contributors": [],
+  "bugs": {},
+  "engines": {
+    "node": ">= 22.18.0"
+  },
+  "feathers": {
+    "language": "js",
+    "packager": "yarn",
+    "database": "mongodb",
+    "framework": "express",
+    "transports": [
+      "rest",
+      "websockets"
+    ],
+    "schema": "json"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "files": [
+    "lib/client.js",
+    "lib/**/*.d.ts",
+    "lib/**/*.shared.js"
+  ],
+  "main": "src/client",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "start": "node src",
+    "dev": "nodemon src/",
+    "prettier": "npx prettier \"**/*.js\" --write",
+    "mocha": "cross-env NODE_ENV=test mocha test/ --recursive --exit",
+    "test": "npm run mocha",
+    "bundle:client": "npm pack --pack-destination ./public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/guadaluperobles/BackCustomCity.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/guadaluperobles/BackCustomCity/issues"
-  },
-  "homepage": "https://github.com/guadaluperobles/BackCustomCity#readme",
   "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.18.0",
-    "morgan": "^1.10.1"
+    "@feathersjs/adapter-commons": "5.0.34",
+    "@feathersjs/authentication": "5.0.34",
+    "@feathersjs/authentication-client": "5.0.34",
+    "@feathersjs/configuration": "5.0.34",
+    "@feathersjs/errors": "5.0.34",
+    "@feathersjs/express": "5.0.34",
+    "@feathersjs/feathers": "5.0.34",
+    "@feathersjs/mongodb": "5.0.34",
+    "@feathersjs/schema": "5.0.34",
+    "@feathersjs/socketio": "5.0.34",
+    "@feathersjs/transport-commons": "5.0.34",
+    "compression": "^1.8.1",
+    "mongodb": "6.16.0",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@feathersjs/cli": "5.0.34",
+    "@feathersjs/rest-client": "5.0.34",
+    "axios": "1.9.0",
+    "cross-env": "^10.0.0",
+    "mocha": "11.2.2",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
   }
 }
