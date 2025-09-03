@@ -1,9 +1,14 @@
 // For more information about this file see https://dove.feathersjs.com/guides/cli/client.html
 import { feathers } from '@feathersjs/feathers'
 import authenticationClient from '@feathersjs/authentication-client'
+export {}
+
+export {}
+
+export {}
 
 /**
- * Returns a  client for the React-BackCustomCity app.
+ * Returns a  client for the my-app app.
  *
  * @param connection The REST or Socket.io Feathers client connection
  * @param authenticationOptions Additional settings for the authentication client
@@ -16,6 +21,12 @@ export const createClient = (connection, authenticationOptions = {}) => {
   client.configure(connection)
   client.configure(authenticationClient(authenticationOptions))
   client.set('connection', connection)
+
+  client.configure(invoicesClient)
+
+  client.configure(ratesClient)
+
+  client.configure(convertClient)
 
   return client
 }

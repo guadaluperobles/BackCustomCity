@@ -1,4 +1,4 @@
-# React-BackCustomCity
+# my-app
 
 > 
 
@@ -12,7 +12,7 @@ This project uses [Feathers](http://feathersjs.com). An open source framework fo
 2. Install your dependencies
 
     ```
-    cd path/to/React-BackCustomCity
+    cd path/to/my-app
     npm install
     ```
 
