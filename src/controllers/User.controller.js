@@ -44,7 +44,7 @@ const save = async (req, res) => {
   }
 };
 
-const clear = (req, res) => res.send("Deleting");
+const remove = (req, res) => res.send("Deleting");
 
 const login = async (req, res) => {
 
@@ -75,4 +75,4 @@ const logout = (req, res) => {
   res.cookie({"token": ""})
 }
 
-export {index, save, clear, login, logout};
+export {index, save, remove, login, logout};

@@ -49,7 +49,7 @@ const save = async (req, res) => {
   }
 };
 
-const clear = async (req, res) => {
+const remove = async (req, res) => {
   const {_id } = req.body;
 
   try{
@@ -69,4 +69,4 @@ const clear = async (req, res) => {
   }
 };
 
-export {index, save, clear};
+export {index, save, remove};
